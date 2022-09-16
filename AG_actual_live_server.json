@@ -1,0 +1,296 @@
+{
+    "name": "3e-sit-wa-agw-02",
+    "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02",
+    "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+    "type": "Microsoft.Network/applicationGateways",
+    "location": "canadacentral",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "df702629-8aaa-40c5-a146-1a132acff37f",
+        "sku": {
+            "name": "Standard_Small",
+            "tier": "Standard",
+            "capacity": 2
+        },
+        "operationalState": "Running",
+        "gatewayIPConfigurations": [
+            {
+                "name": "appGatewayIpConfig",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/gatewayIPConfigurations/appGatewayIpConfig",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "subnet": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/network/providers/Microsoft.Network/virtualNetworks/fin91/subnets/sit-appgw"
+                    }
+                },
+                "type": "Microsoft.Network/applicationGateways/gatewayIPConfigurations"
+            }
+        ],
+        "sslCertificates": [
+            {
+                "name": "dentons.global",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/sslCertificates/dentons.global",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "publicCertData": "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",
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/httpListeners/3e-sit-wa-agw-02-https"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/sslCertificates"
+            }
+        ],
+        "authenticationCertificates": [
+            {
+                "name": "3e-sit-wa-agw-02-https731b402b-de71-4f6e-b886-41d88bd1f035",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/authenticationCertificates/3e-sit-wa-agw-02-https731b402b-de71-4f6e-b886-41d88bd1f035",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tDQpNSUlHdXpDQ0JhT2dBd0lCQWdJUUJtYzl5MmxKYWwrWHh0KzAxVzZBWmpBTkJna3Foa2lHOXcwQkFRc0ZBREJQDQpNUXN3Q1FZRFZRUUdFd0pWVXpFVk1CTUdBMVVFQ2hNTVJHbG5hVU5sY25RZ1NXNWpNU2t3SndZRFZRUURFeUJFDQphV2RwUTJWeWRDQlVURk1nVWxOQklGTklRVEkxTmlBeU1ESXdJRU5CTVRBZUZ3MHlNakF6TURnd01EQXdNREJhDQpGdzB5TXpBME1ETXlNelU1TlRsYU1GNHhDekFKQmdOVkJBWVRBa05CTVJBd0RnWURWUVFJRXdkQmJHSmxjblJoDQpNUkF3RGdZRFZRUUhFd2REWVd4bllYSjVNUkF3RGdZRFZRUUtFd2RFWlc1MGIyNXpNUmt3RndZRFZRUUREQkFxDQpMbVJsYm5SdmJuTXVaMnh2WW1Gc01JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBDQp5a1dnS2NVUVlnWHdDK0ZzanRaVUR0U3BaMWYzQVhsQlYyMDMxU1prdE56MHU5MHFOei92KzdIMjdvR1VjNXRrDQpzUGxpMG8vS2RreEwzNlhOcjF6OFpmb0RpdTErUnlHeTJFM1dmaGVZcFhtWUhWOEJ0Znp0TG5mSlUyd1FmejhpDQpXbXRrRVBNUTlJQmZsZ0V5SUdKaEQwR0g0Y0FiRFZ5aDlleDlrYlNlUGhYa0w4NWhMcjRwR1lOZ3R4MC8zdW81DQpUL3JIalowOXYyOGZwbFRFc0FWeVgvaHh6Vk85ekI3cEMxSDdObWc0a0tsbkJVZUE1Q0RKNWkzOG1FMjJqelVPDQpsMlBka0Qvdk80SnNBeXpKNjFhbVVtaDVTcWJnUlFpbENJenpGZkIyTWt5bTBlWWU2Szk1ajRjRWdTQnJNd2hCDQpFODVXYzkrVEthaXU1SWY2ekxhWEtRSURBUUFCbzRJRGdqQ0NBMzR3SHdZRFZSMGpCQmd3Rm9BVXQydWk2cWlxDQpoSXg1NnJUYUQ1aXl4WlYydWZRd0hRWURWUjBPQkJZRUZPdjFtV2txbmlSZE9GM0VPcWVXb0FnZXF6bjRNQ3NHDQpBMVVkRVFRa01DS0NFQ291WkdWdWRHOXVjeTVuYkc5aVlXeUNEbVJsYm5SdmJuTXVaMnh2WW1Gc01BNEdBMVVkDQpEd0VCL3dRRUF3SUZvREFkQmdOVkhTVUVGakFVQmdnckJnRUZCUWNEQVFZSUt3WUJCUVVIQXdJd2dZOEdBMVVkDQpId1NCaHpDQmhEQkFvRDZnUElZNmFIUjBjRG92TDJOeWJETXVaR2xuYVdObGNuUXVZMjl0TDBScFoybERaWEowDQpWRXhUVWxOQlUwaEJNalUyTWpBeU1FTkJNUzAwTG1OeWJEQkFvRDZnUElZNmFIUjBjRG92TDJOeWJEUXVaR2xuDQphV05sY25RdVkyOXRMMFJwWjJsRFpYSjBWRXhUVWxOQlUwaEJNalUyTWpBeU1FTkJNUzAwTG1OeWJEQStCZ05WDQpIU0FFTnpBMU1ETUdCbWVCREFFQ0FqQXBNQ2NHQ0NzR0FRVUZCd0lCRmh0b2RIUndPaTh2ZDNkM0xtUnBaMmxqDQpaWEowTG1OdmJTOURVRk13ZndZSUt3WUJCUVVIQVFFRWN6QnhNQ1FHQ0NzR0FRVUZCekFCaGhob2RIUndPaTh2DQpiMk56Y0M1a2FXZHBZMlZ5ZEM1amIyMHdTUVlJS3dZQkJRVUhNQUtHUFdoMGRIQTZMeTlqWVdObGNuUnpMbVJwDQpaMmxqWlhKMExtTnZiUzlFYVdkcFEyVnlkRlJNVTFKVFFWTklRVEkxTmpJd01qQkRRVEV0TVM1amNuUXdDUVlEDQpWUjBUQkFJd0FEQ0NBWUFHQ2lzR0FRUUIxbmtDQkFJRWdnRndCSUlCYkFGcUFIY0E2RDdRMmo3MUJqVXk1MWNvDQp2SWxyeVFQVHk5RVJhK3pyYWVGM2ZXMEd2VzRBQUFGL2FoRTMwd0FBQkFNQVNEQkdBaUVBN2FKRTdqOVF6ODlFDQpvNWJwWTY5ck1mWFY0MnpIenR4QkZIV0h3YVdPNFBzQ0lRRDBzR2tmVTROd29YTFRsN1lVMkpNK3pFbVRPck9wDQoyVVlRZG43dDFwejd0QUIzQURYUEdSdS9zV3hYdncrdFRHMUN5N3UySnlBbVVlby80U3J2cUFQRE85Wk1BQUFCDQpmMm9ST0JrQUFBUURBRWd3UmdJaEFMVFViNDB6ZUNKMENjb05JQm8wWWk0WkZCOE5KUVZoOStpaTVsZ1BzWmRlDQpBaUVBbDcySmVkL1VDYWpuazhWR3BSWjJMb3oyK1k3K3U5cWhMYmcyeHV1cTY1c0FkZ0N6YzNjSDRZUlErR09HDQoxZ1dwM0JFSlNua3RzV2NNQzRmYzhBTU9lVGFsbWdBQUFYOXFFVGc0QUFBRUF3QkhNRVVDSUVvSmxUeTFYT3VPDQo5K0ZwejF2cXFmTXB0ZnY2RytIQUp5V2RoOWlyMHdNNkFpRUFsVWttak5NM0hlblFBQmlpL2VVYnVnTGNQVkltDQpzWG5wdzZpR2E4WWRPZ293RFFZSktvWklodmNOQVFFTEJRQURnZ0VCQUMrcTBzN0kwaWJCU0tjM1lyWS9BZm1uDQpSN3hwNkQ4YWFlRG8vMk0zQzZ5YUwxRGJsY3BEUU1IWFhtcDZ4RW9DR0ZocTFVd05DR2RkcGRLQ0tWN3R0a2lXDQpVa3ZJdHk0UEIzWnR4UXY0NHBCZ3NCMDgxeHlnYVd1a1BZVzJHaU5wdUFjT3pNTWl5WHBlMkFNd3JSZUxORzdnDQovczVtT21VZTdyMjdMWnQrK0tFa1c4M1lDYjB5MnJqV2M4V2VHRy8yOGNSMkprbnNNaXh1WmxRUUMxencrUC8vDQpJTEhhWWtwNmV6a2FybEdCYnZ6ZENRbHl6YVhWYWJJWVhiNWlVa1RPbHZZYXJKdFhjVDhCNGp6c3B4ODFVL3dPDQpBb0dEdmthQXRDa1ppSVRRVXgxbThiMU5jdWNmc1g2NHZRc0NXYUlNeTNsaFdZQlpLakYzQ2VtUk10R3Nabnc9DQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tDQo=",
+                    "backendHttpSettings": [
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/backendHttpSettingsCollection/3e-sit-wa-agw-02-https"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/authenticationCertificates"
+            }
+        ],
+        "frontendIPConfigurations": [
+            {
+                "name": "appGwPrivateFrontendIp",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/frontendIPConfigurations/appGwPrivateFrontendIp",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "type": "Microsoft.Network/applicationGateways/frontendIPConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAddress": "10.149.137.12",
+                    "privateIPAllocationMethod": "Static",
+                    "subnet": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/network/providers/Microsoft.Network/virtualNetworks/fin91/subnets/sit-appgw"
+                    },
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/httpListeners/3e-sit-wa-agw-02-http"
+                        },
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/httpListeners/3e-sit-wa-agw-02-https"
+                        }
+                    ]
+                }
+            }
+        ],
+        "frontendPorts": [
+            {
+                "name": "port_80",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/frontendPorts/port_80",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "port": 80,
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/httpListeners/3e-sit-wa-agw-02-http"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/frontendPorts"
+            },
+            {
+                "name": "port_443",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/frontendPorts/port_443",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "port": 443,
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/httpListeners/3e-sit-wa-agw-02-https"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/frontendPorts"
+            }
+        ],
+        "backendAddressPools": [
+            {
+                "name": "3e-sit-wa-agw-02-bp",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/backendAddressPools/3e-sit-wa-agw-02-bp",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "backendIPConfigurations": [
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/networkInterfaces/sfin91teilwa03-nic-1/ipConfigurations/ipconfig1"
+                        },
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/networkInterfaces/sfin91teilwa04-nic-1/ipConfigurations/ipconfig1"
+                        }
+                    ],
+                    "backendAddresses": [],
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/requestRoutingRules/3e-sit-wa-agw-02-http"
+                        },
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/requestRoutingRules/3e-sit-wa-agw-02-https"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/backendAddressPools"
+            }
+        ],
+        "backendHttpSettingsCollection": [
+            {
+                "name": "3e-sit-wa-agw-02-http",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/backendHttpSettingsCollection/3e-sit-wa-agw-02-http",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "port": 80,
+                    "protocol": "Http",
+                    "cookieBasedAffinity": "Disabled",
+                    "connectionDraining": {
+                        "enabled": true,
+                        "drainTimeoutInSec": 60
+                    },
+                    "pickHostNameFromBackendAddress": false,
+                    "requestTimeout": 20,
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/requestRoutingRules/3e-sit-wa-agw-02-http"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/backendHttpSettingsCollection"
+            },
+            {
+                "name": "3e-sit-wa-agw-02-https",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/backendHttpSettingsCollection/3e-sit-wa-agw-02-https",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "port": 443,
+                    "protocol": "Https",
+                    "cookieBasedAffinity": "Disabled",
+                    "connectionDraining": {
+                        "enabled": true,
+                        "drainTimeoutInSec": 60
+                    },
+                    "pickHostNameFromBackendAddress": false,
+                    "requestTimeout": 20,
+                    "authenticationCertificates": [
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/authenticationCertificates/3e-sit-wa-agw-02-https731b402b-de71-4f6e-b886-41d88bd1f035"
+                        }
+                    ],
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/requestRoutingRules/3e-sit-wa-agw-02-https"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/backendHttpSettingsCollection"
+            }
+        ],
+        "httpListeners": [
+            {
+                "name": "3e-sit-wa-agw-02-http",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/httpListeners/3e-sit-wa-agw-02-http",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "frontendIPConfiguration": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/frontendIPConfigurations/appGwPrivateFrontendIp"
+                    },
+                    "frontendPort": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/frontendPorts/port_80"
+                    },
+                    "protocol": "Http",
+                    "requireServerNameIndication": false,
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/requestRoutingRules/3e-sit-wa-agw-02-http"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/httpListeners"
+            },
+            {
+                "name": "3e-sit-wa-agw-02-https",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/httpListeners/3e-sit-wa-agw-02-https",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "frontendIPConfiguration": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/frontendIPConfigurations/appGwPrivateFrontendIp"
+                    },
+                    "frontendPort": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/frontendPorts/port_443"
+                    },
+                    "protocol": "Https",
+                    "sslCertificate": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/sslCertificates/dentons.global"
+                    },
+                    "requireServerNameIndication": false,
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/requestRoutingRules/3e-sit-wa-agw-02-https"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/httpListeners"
+            }
+        ],
+        "urlPathMaps": [],
+        "requestRoutingRules": [
+            {
+                "name": "3e-sit-wa-agw-02-http",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/requestRoutingRules/3e-sit-wa-agw-02-http",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "ruleType": "Basic",
+                    "httpListener": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/httpListeners/3e-sit-wa-agw-02-http"
+                    },
+                    "backendAddressPool": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/backendAddressPools/3e-sit-wa-agw-02-bp"
+                    },
+                    "backendHttpSettings": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/backendHttpSettingsCollection/3e-sit-wa-agw-02-http"
+                    }
+                },
+                "type": "Microsoft.Network/applicationGateways/requestRoutingRules"
+            },
+            {
+                "name": "3e-sit-wa-agw-02-https",
+                "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/requestRoutingRules/3e-sit-wa-agw-02-https",
+                "etag": "W/\"7768461c-2108-4c1e-893c-1654f9302839\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "ruleType": "Basic",
+                    "httpListener": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/httpListeners/3e-sit-wa-agw-02-https"
+                    },
+                    "backendAddressPool": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/backendAddressPools/3e-sit-wa-agw-02-bp"
+                    },
+                    "backendHttpSettings": {
+                        "id": "/subscriptions/47e915b6-d596-4824-8bd9-47b486986548/resourceGroups/3e-sit2/providers/Microsoft.Network/applicationGateways/3e-sit-wa-agw-02/backendHttpSettingsCollection/3e-sit-wa-agw-02-https"
+                    }
+                },
+                "type": "Microsoft.Network/applicationGateways/requestRoutingRules"
+            }
+        ],
+        "probes": [],
+        "redirectConfigurations": [],
+        "enableHttp2": false
+    }
+}

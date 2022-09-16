@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "canadacentral"
+        },
+        "applicationGatewayName": {
+            "value": "ag-test-df"
+        },
+        "tier": {
+            "value": "Standard"
+        },
+        "skuSize": {
+            "value": "Standard_Small"
+        },
+        "capacity": {
+            "value": 2
+        },
+        "subnetName": {
+            "value": "appgw"
+        },
+        "zones": {
+            "value": []
+        },
+        "dentons.global_data": {
+            "value": null
+        },
+        "dentons.global_password": {
+            "value": null
+        },
+        "3e-prf-wa-http2s_httpCert": {
+            "value": null
+        }
+    }
+}
