@@ -2,6 +2,9 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "_3e_prf_wa_http2s_httpCert": {
+      "value": "xyz"
+    },
     "applicationGatewayName": {
       "value": "asdfadf"
     },
