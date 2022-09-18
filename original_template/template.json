@@ -1,0 +1,176 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "type": "string"
+        },
+        "applicationGatewayName": {
+            "type": "string"
+        },
+        "tier": {
+            "type": "string"
+        },
+        "skuSize": {
+            "type": "string"
+        },
+        "capacity": {
+            "type": "int",
+            "defaultValue": 2
+        },
+        "subnetName": {
+            "type": "string"
+        },
+        "zones": {
+            "type": "array"
+        },
+        "mycert1_data": {
+            "type": "securestring"
+        },
+        "mycert1_password": {
+            "type": "securestring"
+        },
+        "backsetting1_httpCert": {
+            "type": "securestring"
+        }
+    },
+    "variables": {
+        "vnetId": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/virtualNetworks/testvn6",
+        "publicIPRef": "",
+        "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]",
+        "applicationGatewayId": "[resourceId('Microsoft.Network/applicationGateways', parameters('applicationGatewayName'))]"
+    },
+    "resources": [
+        {
+            "name": "[parameters('applicationGatewayName')]",
+            "type": "Microsoft.Network/applicationGateways",
+            "apiVersion": "2021-08-01",
+            "location": "[parameters('location')]",
+            "zones": "[parameters('zones')]",
+            "dependsOn": [],
+            "tags": {
+                "CUSTOMER": "Bicep"
+            },
+            "properties": {
+                "sku": {
+                    "name": "[parameters('skuSize')]",
+                    "tier": "[parameters('tier')]",
+                    "capacity": "[parameters('capacity')]"
+                },
+                "gatewayIPConfigurations": [
+                    {
+                        "name": "appGatewayIpConfig",
+                        "properties": {
+                            "subnet": {
+                                "id": "[variables('subnetRef')]"
+                            }
+                        }
+                    }
+                ],
+                "frontendIPConfigurations": [
+                    {
+                        "name": "appGwPrivateFrontendIp",
+                        "properties": {
+                            "subnet": {
+                                "id": "[variables('subnetRef')]"
+                            }
+                        }
+                    }
+                ],
+                "frontendPorts": [
+                    {
+                        "name": "port_443",
+                        "properties": {
+                            "Port": 443
+                        }
+                    }
+                ],
+                "backendAddressPools": [
+                    {
+                        "name": "backpool1",
+                        "properties": {
+                            "backendAddresses": []
+                        }
+                    }
+                ],
+                "backendHttpSettingsCollection": [
+                    {
+                        "name": "backsetting1",
+                        "properties": {
+                            "Port": 443,
+                            "Protocol": "Https",
+                            "cookieBasedAffinity": "Disabled",
+                            "requestTimeout": 20,
+                            "authenticationCertificates": [
+                                {
+                                    "id": "[concat(variables('applicationGatewayId'), '/authenticationCertificates/backsetting136a51ed6-1587-43cf-b0ba-d5ca1738d042')]"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "backendSettingsCollection": [],
+                "httpListeners": [
+                    {
+                        "name": "3e-prf-wa-https-list",
+                        "properties": {
+                            "frontendIPConfiguration": {
+                                "id": "[concat(variables('applicationGatewayId'), '/frontendIPConfigurations/appGwPrivateFrontendIp')]"
+                            },
+                            "frontendPort": {
+                                "id": "[concat(variables('applicationGatewayId'), '/frontendPorts/port_443')]"
+                            },
+                            "protocol": "Https",
+                            "sslCertificate": {
+                                "id": "[concat(variables('applicationGatewayId'), '/sslCertificates/mycert1')]"
+                            }
+                        }
+                    }
+                ],
+                "listeners": [],
+                "requestRoutingRules": [
+                    {
+                        "Name": "3e-prf-wa-https",
+                        "properties": {
+                            "RuleType": "Basic",
+                            "httpListener": {
+                                "id": "[concat(variables('applicationGatewayId'), '/httpListeners/3e-prf-wa-https-list')]"
+                            },
+                            "backendAddressPool": {
+                                "id": "[concat(variables('applicationGatewayId'), '/backendAddressPools/backpool1')]"
+                            },
+                            "backendHttpSettings": {
+                                "id": "[concat(variables('applicationGatewayId'), '/backendHttpSettingsCollection/backsetting1')]"
+                            }
+                        }
+                    }
+                ],
+                "routingRules": [],
+                "enableHttp2": false,
+                "sslCertificates": [
+                    {
+                        "name": "mycert1",
+                        "properties": {
+                            "data": "[parameters('mycert1_data')]",
+                            "password": "[parameters('mycert1_password')]"
+                        }
+                    }
+                ],
+                "probes": [],
+                "authenticationCertificates": [
+                    {
+                        "name": "backsetting136a51ed6-1587-43cf-b0ba-d5ca1738d042",
+                        "properties": {
+                            "data": "[parameters('backsetting1_httpCert')]",
+                            "backendHttpSettings": [
+                                {
+                                    "id": "[concat(variables('applicationGatewayId'), '/backendHttpSettingsCollection/backsetting1')]"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

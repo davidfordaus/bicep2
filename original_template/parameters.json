@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "australiaeast"
+        },
+        "applicationGatewayName": {
+            "value": "3e-prf-wa-agw"
+        },
+        "tier": {
+            "value": "Standard"
+        },
+        "skuSize": {
+            "value": "Standard_Small"
+        },
+        "capacity": {
+            "value": 1
+        },
+        "subnetName": {
+            "value": "subnet-2-net"
+        },
+        "zones": {
+            "value": []
+        },
+        "mycert1_data": {
+            "value": null
+        },
+        "mycert1_password": {
+            "value": null
+        },
+        "backsetting1_httpCert": {
+            "value": null
+        }
+    }
+}
