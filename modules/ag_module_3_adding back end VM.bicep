@@ -7,6 +7,8 @@ param skuSize string = 'Standard_Small'
 param capacity int = 1
 param vnetName string = 'testvn6' // eg 'vnet-local'
 param subnetName string = 'subnet-0-net' // eg 'subnet1'
+param privateIPAddress string
+
 @description('The base-64 encoded SSL certificate PFX data. Must be supplied via a parameters file references to a Key Vault / Secret Name.')
 param sslCertificateData string
 
@@ -62,7 +64,7 @@ resource applicationGatewayName_resource 'Microsoft.Network/applicationGateways@
           subnet: {
             id: subnetRef
           }
-          privateIPAddress: '10.0.1.10'
+          privateIPAddress: privateIPAddress
           privateIPAllocationMethod: 'Static'
         }
       }
@@ -87,7 +89,7 @@ resource applicationGatewayName_resource 'Microsoft.Network/applicationGateways@
         properties: {
           backendAddresses: [
             {
-              ipAddress: '10.0.0.4'
+              ipAddress: '10.0.0.5'
             }
           ]
         }
@@ -234,17 +236,17 @@ resource applicationGatewayName_resource 'Microsoft.Network/applicationGateways@
 
     probes: [
       // Probe loads correctly but breaks the AG
-      // {
-      //   name: 'http-probe'
-      //   properties:{
-      //     host: '127.0.0.1'
-      //     interval: 10 // TODO  SHOULD BE 30.  Set low for testing
-      //     timeout: 30
-      //     path: '/'
-      //     // port: 80  // Small SKU doesn't permit a port; it's 80 by default for protocol Http
-      //     protocol: 'Http'
-      //   }
-      // }
+      {
+        name: 'http-probe'
+        properties:{
+          host: '127.0.0.1'
+          interval: 10 // TODO  SHOULD BE 30.  Set low for testing
+          timeout: 30
+          path: '/'
+          // port: 80  // Small SKU doesn't permit a port; it's 80 by default for protocol Http
+          protocol: 'Http'
+        }
+      }
     ]
     // authenticationCertificates: [
     //   {

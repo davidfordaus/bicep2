@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "applicationGatewayName": {
-      "value": "myag1a"
+      "value": "myag1in4"
     },
     "tier": {
       "value": "Standard"
@@ -18,9 +18,11 @@
       "value": "testvn6"
     },
     "subnetName": {
-      "value": "subnet-1-net"
+      "value": "subnet-4-net"
     },
-
+    "privateIPAddress" : {
+      "value" : "10.0.4.10"
+    },
 
 
     "sslCertificateData": {
