@@ -123,24 +123,24 @@ resource applicationGatewayName_resource 'Microsoft.Network/applicationGateways@
           }
         }
       }
-      // {
-      //   name: '3e-prf-wa-http2s'
-      //   properties: {
-      //     port: 443
-      //     protocol: 'Https'
-      //     cookieBasedAffinity: 'Disabled'
-      //     requestTimeout: 20
-      //     // authenticationCertificates: [
-      //     //   {
-      //     //     id: '${applicationGatewayId}/authenticationCertificates/3e-prf-wa-http2sb65037a0-14d5-428f-8d08-24ae7608d03c'
-      //     //   }
-      //     // ]
-      //     connectionDraining: {
-      //       drainTimeoutInSec: 60
-      //       enabled: true
-      //     }
-      //   }
-      // }
+      {
+        name: '3e-prf-wa-https'
+        properties: {
+          port: 443
+          protocol: 'Https'
+          cookieBasedAffinity: 'Disabled'
+          requestTimeout: 20
+          // authenticationCertificates: [
+          //   {
+          //     id: '${applicationGatewayId}/authenticationCertificates/3e-prf-wa-http2sb65037a0-14d5-428f-8d08-24ae7608d03c'
+          //   }
+          // ]
+          connectionDraining: {
+            drainTimeoutInSec: 60
+            enabled: true
+          }
+        }
+      }
     ]
     backendSettingsCollection: []
     httpListeners: [
@@ -202,7 +202,7 @@ resource applicationGatewayName_resource 'Microsoft.Network/applicationGateways@
           }
           backendHttpSettings: {
             // TODO this should be 3e-prf-wa-https  HTTPS
-            id: '${applicationGatewayId}/backendHttpSettingsCollection/3e-prf-wa-http'
+            id: '${applicationGatewayId}/backendHttpSettingsCollection/3e-prf-wa-https'
           }
         }
       }
