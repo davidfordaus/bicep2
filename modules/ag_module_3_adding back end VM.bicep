@@ -190,21 +190,22 @@ resource applicationGatewayName_resource 'Microsoft.Network/applicationGateways@
           }
         }
       }
-      // {
-      //   name: '3e-prf-wa-https'
-      //   properties: {
-      //     ruleType: 'Basic'
-      //     httpListener: {
-      //       id: '${applicationGatewayId}/httpListeners/3e-prf-wa-https'
-      //     }
-      //     backendAddressPool: {
-      //       id: '${applicationGatewayId}/backendAddressPools/3e-prf-wa-agw-bp'
-      //     }
-      //     backendHttpSettings: {
-      //       id: '${applicationGatewayId}/backendHttpSettingsCollection/3e-prf-wa-http2s'
-      //     }
-      //   }
-      // }
+      {
+        name: '3e-prf-wa-https'
+        properties: {
+          ruleType: 'Basic'
+          httpListener: {
+            id: '${applicationGatewayId}/httpListeners/3e-prf-wa-https'
+          }
+          backendAddressPool: {
+            id: '${applicationGatewayId}/backendAddressPools/backend-pool'
+          }
+          backendHttpSettings: {
+            // TODO this should be 3e-prf-wa-https  HTTPS
+            id: '${applicationGatewayId}/backendHttpSettingsCollection/3e-prf-wa-http'
+          }
+        }
+      }
     ]
     routingRules: []
     enableHttp2: false
