@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "applicationGatewayName": {
-      "value": "myag3a"
+      "value": "myag1a"
     },
     "tier": {
       "value": "Standard"

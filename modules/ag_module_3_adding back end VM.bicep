@@ -232,7 +232,20 @@ resource applicationGatewayName_resource 'Microsoft.Network/applicationGateways@
   //     }
   // ],
 
-    probes: []
+    probes: [
+      // Probe loads correctly but breaks the AG
+      // {
+      //   name: 'http-probe'
+      //   properties:{
+      //     host: '127.0.0.1'
+      //     interval: 10 // TODO  SHOULD BE 30.  Set low for testing
+      //     timeout: 30
+      //     path: '/'
+      //     // port: 80  // Small SKU doesn't permit a port; it's 80 by default for protocol Http
+      //     protocol: 'Http'
+      //   }
+      // }
+    ]
     // authenticationCertificates: [
     //   {
     //     name: '3e-prf-wa-http2sb65037a0-14d5-428f-8d08-24ae7608d03c'
