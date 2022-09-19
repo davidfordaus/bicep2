@@ -1,0 +1,215 @@
+{
+    "name": "myag2",
+    "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2",
+    "etag": "W/\"ef5b3457-fbbc-4f7f-b45f-2a093f7bbac7\"",
+    "type": "Microsoft.Network/applicationGateways",
+    "location": "australiaeast",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Updating",
+        "resourceGuid": "d297b40b-002b-40ef-bda9-8ed3d740a872",
+        "sku": {
+            "name": "Standard_Small",
+            "tier": "Standard",
+            "capacity": 1
+        },
+        "operationalState": "Stopped",
+        "gatewayIPConfigurations": [
+            {
+                "name": "appGatewayIpConfig",
+                "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/gatewayIPConfigurations/appGatewayIpConfig",
+                "etag": "W/\"ef5b3457-fbbc-4f7f-b45f-2a093f7bbac7\"",
+                "properties": {
+                    "provisioningState": "Updating",
+                    "subnet": {
+                        "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/virtualNetworks/testvn6/subnets/subnet-1-net"
+                    }
+                },
+                "type": "Microsoft.Network/applicationGateways/gatewayIPConfigurations"
+            }
+        ],
+        "sslCertificates": [
+            {
+                "name": "frontendCert",
+                "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/sslCertificates/frontendCert",
+                "etag": "W/\"ef5b3457-fbbc-4f7f-b45f-2a093f7bbac7\"",
+                "properties": {
+                    "provisioningState": "Updating",
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/httpListeners/3e-prf-wa-https"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/sslCertificates"
+            }
+        ],
+        "authenticationCertificates": [],
+        "frontendIPConfigurations": [
+            {
+                "name": "appGwPrivateFrontendIp",
+                "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/frontendIPConfigurations/appGwPrivateFrontendIp",
+                "etag": "W/\"ef5b3457-fbbc-4f7f-b45f-2a093f7bbac7\"",
+                "type": "Microsoft.Network/applicationGateways/frontendIPConfigurations",
+                "properties": {
+                    "provisioningState": "Updating",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "subnet": {
+                        "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/virtualNetworks/testvn6/subnets/subnet-1-net"
+                    },
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/httpListeners/3e-prf-wa-http"
+                        },
+                        {
+                            "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/httpListeners/3e-prf-wa-https"
+                        }
+                    ]
+                }
+            }
+        ],
+        "frontendPorts": [
+            {
+                "name": "port_80",
+                "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/frontendPorts/port_80",
+                "etag": "W/\"ef5b3457-fbbc-4f7f-b45f-2a093f7bbac7\"",
+                "properties": {
+                    "provisioningState": "Updating",
+                    "port": 80,
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/httpListeners/3e-prf-wa-http"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/frontendPorts"
+            },
+            {
+                "name": "port_443",
+                "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/frontendPorts/port_443",
+                "etag": "W/\"ef5b3457-fbbc-4f7f-b45f-2a093f7bbac7\"",
+                "properties": {
+                    "provisioningState": "Updating",
+                    "port": 443,
+                    "httpListeners": [
+                        {
+                            "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/httpListeners/3e-prf-wa-https"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/frontendPorts"
+            }
+        ],
+        "backendAddressPools": [
+            {
+                "name": "3e-prf-wa-agw-bp",
+                "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/backendAddressPools/3e-prf-wa-agw-bp",
+                "etag": "W/\"ef5b3457-fbbc-4f7f-b45f-2a093f7bbac7\"",
+                "properties": {
+                    "provisioningState": "Updating",
+                    "backendAddresses": [],
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/requestRoutingRules/3e-prf-wa-http"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/backendAddressPools"
+            }
+        ],
+        "backendHttpSettingsCollection": [
+            {
+                "name": "3e-prf-wa-http",
+                "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/backendHttpSettingsCollection/3e-prf-wa-http",
+                "etag": "W/\"ef5b3457-fbbc-4f7f-b45f-2a093f7bbac7\"",
+                "properties": {
+                    "provisioningState": "Updating",
+                    "port": 80,
+                    "protocol": "Http",
+                    "cookieBasedAffinity": "Disabled",
+                    "connectionDraining": {
+                        "enabled": true,
+                        "drainTimeoutInSec": 60
+                    },
+                    "pickHostNameFromBackendAddress": false,
+                    "requestTimeout": 20,
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/requestRoutingRules/3e-prf-wa-http"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/backendHttpSettingsCollection"
+            }
+        ],
+        "httpListeners": [
+            {
+                "name": "3e-prf-wa-http",
+                "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/httpListeners/3e-prf-wa-http",
+                "etag": "W/\"ef5b3457-fbbc-4f7f-b45f-2a093f7bbac7\"",
+                "properties": {
+                    "provisioningState": "Updating",
+                    "frontendIPConfiguration": {
+                        "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/frontendIPConfigurations/appGwPrivateFrontendIp"
+                    },
+                    "frontendPort": {
+                        "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/frontendPorts/port_80"
+                    },
+                    "protocol": "Http",
+                    "requireServerNameIndication": false,
+                    "requestRoutingRules": [
+                        {
+                            "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/requestRoutingRules/3e-prf-wa-http"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/applicationGateways/httpListeners"
+            },
+            {
+                "name": "3e-prf-wa-https",
+                "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/httpListeners/3e-prf-wa-https",
+                "etag": "W/\"ef5b3457-fbbc-4f7f-b45f-2a093f7bbac7\"",
+                "properties": {
+                    "provisioningState": "Updating",
+                    "frontendIPConfiguration": {
+                        "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/frontendIPConfigurations/appGwPrivateFrontendIp"
+                    },
+                    "frontendPort": {
+                        "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/frontendPorts/port_443"
+                    },
+                    "protocol": "Https",
+                    "sslCertificate": {
+                        "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/sslCertificates/frontendCert"
+                    },
+                    "requireServerNameIndication": false
+                },
+                "type": "Microsoft.Network/applicationGateways/httpListeners"
+            }
+        ],
+        "urlPathMaps": [],
+        "requestRoutingRules": [
+            {
+                "name": "3e-prf-wa-http",
+                "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/requestRoutingRules/3e-prf-wa-http",
+                "etag": "W/\"ef5b3457-fbbc-4f7f-b45f-2a093f7bbac7\"",
+                "properties": {
+                    "provisioningState": "Updating",
+                    "ruleType": "Basic",
+                    "httpListener": {
+                        "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/httpListeners/3e-prf-wa-http"
+                    },
+                    "backendAddressPool": {
+                        "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/backendAddressPools/3e-prf-wa-agw-bp"
+                    },
+                    "backendHttpSettings": {
+                        "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourceGroups/test-df-bicep/providers/Microsoft.Network/applicationGateways/myag2/backendHttpSettingsCollection/3e-prf-wa-http"
+                    }
+                },
+                "type": "Microsoft.Network/applicationGateways/requestRoutingRules"
+            }
+        ],
+        "probes": [],
+        "redirectConfigurations": [],
+        "enableHttp2": false
+    }
+}

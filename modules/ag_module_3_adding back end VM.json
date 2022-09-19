@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "applicationGatewayName": {
+      "value": "myag3b"
+    },
+    "tier": {
+      "value": "Standard"
+    },
+    "skuSize": {
+      "value": "Standard_Small"
+    },
+    "capacity": {
+      "value": 1
+    },
+    "vnetName": {
+      "value": "testvn6"
+    },
+    "subnetName": {
+      "value": "subnet-1-net"
+    },
+
+
+
+    "sslCertificateData": {
+      "reference": {
+          "keyVault": {
+              "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourcegroups/test-df-bicep/providers/Microsoft.KeyVault/vaults/test-keyvault-df"
+          },
+          "secretName": "cert"
+      }
+    },
+    "sslCertificatePassword": {
+        "reference": {
+            "keyVault": {
+                "id": "/subscriptions/a1df2b46-08c4-4d8a-b078-6beb5047606b/resourcegroups/test-df-bicep/providers/Microsoft.KeyVault/vaults/test-keyvault-df"
+            },
+            "secretName": "certPass"
+        }
+    } 
+  }
+}
