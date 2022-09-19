@@ -62,6 +62,8 @@ resource applicationGatewayName_resource 'Microsoft.Network/applicationGateways@
           subnet: {
             id: subnetRef
           }
+          privateIPAddress: '10.0.1.10'
+          privateIPAllocationMethod: 'Static'
         }
       }
     ]
